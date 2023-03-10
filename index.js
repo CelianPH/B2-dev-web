@@ -109,7 +109,7 @@ let resultat = trouverMax(nombres);
 console.log(resultat);
 */
 
-/**
+/** supprimer les voylles d'une phrase 
 function supprimerVoyelles(chaine) {
     let nouvelleChaine = "";
     for (let i = 0; i < chaine.length; i++) {
@@ -128,5 +128,51 @@ let chaine = "Bonjour tout le monde!";
 let resultat = supprimerVoyelles(chaine);
 console.log(resultat);
 */
+
+
+/** finction trier chaine de caarctère 
+function trierOrdreAlph(chaine) {
+    chaine.sort();
+    return chaine 
+}
+let chaine = ["a","k","z","b","p","m","j","t","s","d","l"];
+let resultat = trierOrdreAlph(chaine);
+console.log(resultat);
+*/
+
+/** passer d'un nombre en mot  
+function numberToWorlds (num){
+    const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+    const tens = ["", "", "twenty", "thiry", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+    const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+
+    if (num < 10) {
+        return one[num]
+    } else if (num < 20) {
+        return teens[num - 10]
+    } else {
+        return tens[Math.floor(num/10)] + " " + ones[num % 10]
+    }
+}
+
+console.log(numberToWorlds(20))
+*/
+
+function getPropertyValues(tableau, propriete) {
+    return tableau.map(function(objet) {
+        return objet[propriete]
+    })
+}
+const objArray = [
+    {name: 'test', espece: 'singe', age: 4},
+    {name: 'test', espece: 'ours', age: 6},
+    {name: 'test', espece: 'lion', age: 10},
+    {name: 'test', espece: 'chien', age: 1},
+]
+
+const propertyArray = getPropertyValues(objArray,"age")
+console.log(propertyArray)
+
+
 
 //documenter sur spread operator et sur rest operator 
