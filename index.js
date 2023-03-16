@@ -130,7 +130,7 @@ console.log(resultat);
 */
 
 
-/** finction trier chaine de caarctère 
+/** fonction trier chaine de caarctère 
 function trierOrdreAlph(chaine) {
     chaine.sort();
     return chaine 
@@ -158,6 +158,7 @@ function numberToWorlds (num){
 console.log(numberToWorlds(20))
 */
 
+/** 
 function getPropertyValues(tableau, propriete) {
     return tableau.map(function(objet) {
         return objet[propriete]
@@ -172,4 +173,26 @@ const objArray = [
 
 const propertyArray = getPropertyValues(objArray,"age")
 console.log(propertyArray)
+*/
 
+
+function voyellesMaj(chaine){
+    const voyelles =["a", "e","i","o","u","y"];
+    let nouvelleChaine = "";
+
+    for (let i= 0 ; i < chaine.length; i++){
+        if (voyelles.includes(chaine[i])){
+            nouvelleChaine += chaine[i].toUpperCase();
+        }
+        else{ 
+            nouvelleChaine +=chaine[i];
+        }
+    }
+
+    return nouvelleChaine;
+
+}
+
+const chaine = "je suis amoureux de hugu";
+
+console.log(voyellesMaj(chaine))
