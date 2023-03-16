@@ -173,6 +173,3 @@ const objArray = [
 const propertyArray = getPropertyValues(objArray,"age")
 console.log(propertyArray)
 
-
-
-//documenter sur spread operator et sur rest operator 
